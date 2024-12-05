@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* setting font family */
+@layer base {
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(./assets/fonts/Rubik-Regular.ttf) format("truetype");
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(./assets/fonts/Rubik-SemiBold.ttf) format("truetype");
+  }
+}
+
+/* shortcut classes for tailwind animated */
+@layer components {
+  .hover-pulse {
+    @apply hover:animate-pulse motion-reduce:animate-none;
+  }
+  .hover-jump {
+    @apply hover:animate-jump hover:animate-ease-in hover:animate-delay-[10ms];
+  }
+  .header-main {
+    @apply text-3xl text-[#636363] font-extrabold mb-4;
+  }
+  .subheader {
+    @apply text-lg font-medium;
+  }
+  .text-highlight {
+    @apply font-normal text-[#0A746D];
+  }
+}
